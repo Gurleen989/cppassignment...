@@ -1,0 +1,93 @@
+// This program finds the average time spent programming by a student
+// each day over a three day period.
+
+// PLACE YOUR NAME HERE
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int numStudents;
+	int numdays;
+	float numhours, total, Average1,Average2;
+	int student, day = 0;	// these are the counters for the loops
+
+	cout << "This program will find the average number of hours a day"
+		 << " that a student spent programming and biology over a long weekend\n\n";
+	cout << "How many students are there ?" <<endl<<endl;
+	cin >> numStudents;
+
+	cout <<" Type the number of days in the long weekend" <<endl <<endl;
+	cin >> numdays;
+
+	for (student = 1; student <= numStudents; student++)
+	{
+		total = 0;
+
+		for (day = 1; day <=numdays; day++)
+		{
+			cout << "Please enter the number of hours worked by student "
+				 << student << " on day " << day << " in programming " << endl;
+			cin >> numhours;
+
+			total = total + numhours;
+		}
+
+
+		Average1=total/numdays;
+
+		cout << endl;
+		cout << "The average number of hours per day spent programming by "
+			 << " student " << student << " is " << Average1
+			 << endl << endl << endl;
+
+
+
+
+     total=0;
+     for(day=1;day<=numdays;day++)
+     {
+         cout<<" Please enter the number of hours worked by student  "
+         << student<<" on day"<<day<<" in biology "<<endl<<endl;
+         cin>>numhours;
+         total=total+numhours;
+     }
+
+
+
+
+     Average2 =total/numdays;
+     cout<<endl;
+     cout<<"The average number of hours spent per day biology by "
+      << " student " << student << " is " << Average2
+      <<endl<<endl<<endl;
+
+
+
+
+
+	if (Average2 > Average1)
+    {
+        cout<< "Student" <<student<<" utilized more time studying biology as compared to programming "<<endl<<endl;
+    }
+
+
+
+    if (Average2 < Average1)
+    {
+        cout<< "Student "<<student<<" utilized more time studying programming as compared to biology "<<endl<<endl;
+    }
+
+
+    else if (Average2=Average1)
+    {
+     cout<<" Student "<<student<<" utilized the same amount of time studying programming and biology."<<endl<<endl;
+    }
+
+
+
+	}
+
+	return 0;
+}
