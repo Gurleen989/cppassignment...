@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+
+
+
+int main()
+
+
+{
+    string sentence,words="",translatedwords ="";
+    cout<< " Please enter the original sentence ";
+    getline(cin,sentence);
+    for(int i=0;
+
+        i<sentence.length();
+
+        i++)
+
+    {
+         if(sentence[i]=='15')
+
+        {
+            translatedwords = translatedwords+ words.substr (1,string::npos)+words[02]+ "KPU";
+            words = "" ;
+
+
+        }
+    }
+    translatedwords = translatedwords + words.substr (1,string::npos)+words[02]+"KPU";
+    cout<<"\n translatedwords: "<<translatedwords;
+
+
+
+
+    return 0;
+
+}
